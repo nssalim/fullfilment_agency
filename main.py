@@ -30,9 +30,11 @@ def calculate_shipping_cost(from_coords, to_coords, shipping_type = 'Overnight')
 
 # Test calculate_shipping_cost function 
 test_function(calculate_shipping_cost)
+# Output
+# Great! calculate_shipping_cost() test passed
 
 # Define calculate_driver_cost() 
-# function to take an arbitrary number of positional driver variables
+# calculate_driver_cost function has drivers as an arbitrary number of positional arguments
 def calculate_driver_cost(distance, *drivers):
 # In order to find the best person, calculate how much it would cost for any of the drivers to fulfill this order.
   cheapest_driver = None
@@ -51,7 +53,8 @@ def calculate_driver_cost(distance, *drivers):
 
 # Test calculate_driver_cost function
 test_function(calculate_driver_cost)
-
+# Output
+# Great! calculate_driver_cost() test passed
 
 # Define calculate_money_made() 
 # calculate_money_made function has trips as an arbitrary keyword argument.
@@ -64,5 +67,6 @@ def calculate_money_made(**trips):
 
 # Test calculate_money_made function
 test_function(calculate_money_made)
-
+# Output
+# Great! calculate_money_made() test passed
 
