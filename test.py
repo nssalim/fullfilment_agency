@@ -18,7 +18,7 @@ def test_shipping(f):
   if costs != "$1.04":
     print("calculate_shipping_cost((0, 0), (1, 1)) returned {}. Expected result is {}".format(costs, "$1.04"))
     return
-  print("Great! calculate_shipping_cost() passes tests")
+  print("Great! calculate_shipping_cost() test passed")
 
 class Driver:
   def __init__(self, speed, salary):
@@ -46,7 +46,7 @@ def test_driver(f):
   if driver is not driver1:
     print("calculate_driver_cost() did not provide least expensive driver")
     return
-  print("OK! calculate_driver_cost() passes tests")
+  print("Great! calculate_driver_cost() test passed")
 
 class Trip:
   def __init__(self, cost, driver, driver_cost):

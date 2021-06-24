@@ -1,5 +1,5 @@
 # Fullfilment Agency
-# Program to help minimise costs when delivering goods to consumers.  
+# Program to help minimise costs when delivering goods to consumers and finding out which employee is the best person for a job.
 # Write functions which can receive a variable number of keywords and positional arguments.
 # Working with tests.
 
@@ -28,13 +28,30 @@ def calculate_shipping_cost(from_coords, to_coords, shipping_type = 'Overnight')
 test_function(calculate_shipping_cost)
 
 # Define calculate_driver_cost() 
-
+# function to take an arbitrary number of positional driver variables
+def calculate_driver_cost(distance, *drivers):
+# In order to find the best person, calculate how much it would cost for any of the drivers to fulfill this order.
+  cheapest_driver = None
+  cheapest_driver_price = None
+  for driver in drivers:
+    driver_time = driver.speed * distance
+    price_for_driver = driver.salary * driver_time
+# Now check if the current driver is the cheapest driver.
+    if cheapest_driver is None:
+      cheapest_driver = driver
+      cheapest_driver_price = price_for_driver
+    elif price_for_driver < cheapest_driver_price:
+      cheapest_driver = driver
+      cheapest_driver_price = price_for_driver
+  return cheapest_driver_price, cheapest_driver
 
 # Test the function by calling 
-# test_function(calculate_driver_cost)
+test_function(calculate_driver_cost)
 
 # Define calculate_money_made() 
 
 
 # Test the function by calling 
 # test_function(calculate_money_made)
+
+
