@@ -18,7 +18,7 @@ def test_shipping(f):
   if costs != "$1.04":
     print("calculate_shipping_cost((0, 0), (1, 1)) returned {}. Expected result is {}".format(costs, "$1.04"))
     return
-  print("OK! calculate_shipping_cost() passes tests")
+  print("Great! calculate_shipping_cost() passes tests")
 
 class Driver:
   def __init__(self, speed, salary):

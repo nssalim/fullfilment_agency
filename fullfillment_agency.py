@@ -8,6 +8,7 @@ def get_distance(from_lat, from_long, to_lat, to_long):
   distance = a * c
   return distance
 
+# shipping type and shipping rate
 SHIPPING_PRICES = {
   'Ground': 1,
   'Priority': 1.6,
