@@ -69,4 +69,4 @@ def test_money(f):
   if money != 445:
     print("calculate_driver_cost() did not provide correct final price (expected {}, received {})".format(money, 445))
     return
-  print("OK! calculate_money_made() passes tests")
+  print("Great! calculate_money_made() test passed")
