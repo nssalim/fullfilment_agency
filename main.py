@@ -1,5 +1,9 @@
 # Fullfilment Agency
-# Program to help minimise costs when delivering goods to consumers and finding out which employee is the best person for a job.
+# Program to :-
+# help minimise costs when delivering goods to consumers
+# find out which employee is the best person for a job.
+# money saved on trip
+
 # Write functions which can receive a variable number of keywords and positional arguments.
 # Working with tests.
 
@@ -24,7 +28,7 @@ def calculate_shipping_cost(from_coords, to_coords, shipping_type = 'Overnight')
 # return the formatted price, created by calling the provided format_price() on the price itself.
   return format_price(price)
 
-# Test the function by calling 
+# Test calculate_shipping_cost function 
 test_function(calculate_shipping_cost)
 
 # Define calculate_driver_cost() 
@@ -45,13 +49,20 @@ def calculate_driver_cost(distance, *drivers):
       cheapest_driver_price = price_for_driver
   return cheapest_driver_price, cheapest_driver
 
-# Test the function by calling 
+# Test calculate_driver_cost function
 test_function(calculate_driver_cost)
 
+
 # Define calculate_money_made() 
+# calculate_money_made function has trips as an arbitrary keyword argument.
+def calculate_money_made(**trips):
+  total_money_made = 0
+  for trip_id, trip in trips.items():
+    trip_revenue = trip.cost - trip.driver.cost
+    total_money_made += trip_revenue
+  return total_money_made
 
-
-# Test the function by calling 
-# test_function(calculate_money_made)
+# Test calculate_money_made function
+test_function(calculate_money_made)
 
 
